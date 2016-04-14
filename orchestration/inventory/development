@@ -1,0 +1,8 @@
+[all:vars]
+env=development
+
+[appservers]
+52.38.174.28
+
+[dbservers]
+52.38.174.28
