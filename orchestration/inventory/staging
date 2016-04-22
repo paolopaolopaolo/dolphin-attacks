@@ -1,0 +1,8 @@
+[all:vars]
+env=staging
+
+[appservers]
+107.170.31.120
+
+[dbservers]
+107.170.31.120
