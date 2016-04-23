@@ -1,0 +1,8 @@
+[all:vars]
+env=dolphin_fabulousness
+
+[appservers]
+dolphin.dpmercado.com
+
+[dbservers]
+107.170.31.120
