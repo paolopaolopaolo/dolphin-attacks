@@ -1,0 +1,33 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOLPHIN ATTACKS</title>
+</head>
+<body>
+<h1>EVERYBODY RUN! THE DOLPHINS ARE COMING!!!</h1>
+<img src="{% static 'img/dolphin-kristian-sekulic-isp.jpg' %}">
+</body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var colors = [
+                '#ff0000',
+                '#00ff00',
+                '#0000ff',
+                '#ffff00',
+                '#ff00ff',
+                '#00ffff'
+        ];
+        function timeoutBlock() {
+            setTimeout(function () {
+                $('h1').css({color: colors[Math.floor(Math.random() * colors.length)]});
+                timeoutBlock();
+            }, 50);
+        };
+        timeoutBlock();
+    });
+</script>
+</html>

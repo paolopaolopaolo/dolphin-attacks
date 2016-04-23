@@ -19,6 +19,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'compressor',
+    'dolphin'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -38,12 +39,18 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, "dolphin", "static"),
+)
+
 ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(PROJECT_ROOT, "dolphin", "templates")
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
