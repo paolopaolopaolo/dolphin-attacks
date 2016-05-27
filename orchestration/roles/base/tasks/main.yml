@@ -24,6 +24,7 @@
     - htop
     - git
     - libjpeg-dev
+    - sudo
     - libpq-dev
     - libffi-dev
     - python3
